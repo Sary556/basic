@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .전체 {
+            /* 부모는 자식의 높이를 따라가고 자식은 부모의 넓이를따라간다 */
+            width: 352px;
+            background-color: #caedff;
+            margin: auto; /* 영역 중앙 정렬 */
+            margin-top: 30px; /* 위의 공간 */
+            text-align: center; /* 정렬 */
+            line-height: 100px; /* 행간 */
+            color: white; /* 글자의 색 */
+        }
+        .전체 .첫째 {
+            width: 104px;
+            height: 100px;
+            /* background-color: #d8b4f8; */
+            background-image: url(img/IMG_1.png);
+            float: left;
+            margin-right: 20px;
+        }
+        .전체 .둘째 {
+            width: 104px;
+            height: 100px;
+            /* background-color: #ffc7ea; */
+            background-image: url(IMG/IMG_2.png);
+            float: left;
+            margin-right: 20px;
+        }
+        .전체 .셋째 {
+            width: 104px;
+            height: 100px;
+            /* background-color: #fbf0b2; */
+            background-image: url(IMG/IMG_3.png);
+            float: left;
+        }
+        .전체 .약 {
+            clear: both;
+        }
+        /* color :  #caedff #d8b4f8*/
+    </style>
+</head>
+<body>
+    <div class="전체">
+        <div class="첫째">첫째</div>
+        <div class="둘째">둘째</div>
+        <div class="셋째">셋째</div>
+        <div class="약"></div>
+    </div>
+</body>
+</html>

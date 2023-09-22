@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.전체 {
+    width: 352px;
+    background-color: dodgerblue;
+    margin: auto;
+    margin-top: 30px;
+    overflow: hidden;
+}
+.전체 .자식 {
+    width: 104px;
+    height: 100px;
+    background-color: lightcoral;
+    float: left;
+    margin-right: 20px;
+    text-align: center;
+    line-height: 100px;
+    color: whitesmoke;
+}
+.전체 .첫째 {
+    background-image: url(IMG/IMG_1.png);
+    transition: 0.25s;
+}
+.전체 .첫째:hover {
+    background-image: url(IMG/IMG_2.png);
+}
+.전체 .둘째 {
+    background-image: url(IMG/IMG_2.png);
+}
+.전체 .둘째::before {
+    content: 'before';
+}
+.전체 .둘째::after {
+    content: 'after';
+}
+.전체 .셋째 {
+    background-image: url(IMG/IMG_3.png);
+    margin-right: 0;
+}
+.전체 .약 {
+    clear: both;
+}
+
+.치매약::after {
+    /* 가상선택자 after는 인라인요소 
+    (라인안에있는 글자와같은요소)는 공간을 인식하지 못함 */
+    content: "";
+    /* height: 100px;
+    background-color: blue; */
+    display: block;
+    clear: both;
+}
+
+.부모 {
+    background-color: papayawhip;
+    width: 1000px;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.부모 .child {
+    background-color: forestgreen;
+    width: 33.3333%;
+    float: left;
+}
+
+
+.부모 .일동 {}
+.부모 .이동 {}
+.부모 .삼동 {}
+
+.삼촌 {
+    background-color: papayawhip;
+    width: 1000px;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.삼촌 .child {
+    background-color: forestgreen;
+    width: 33.3333%;
+    float: left;
+}
