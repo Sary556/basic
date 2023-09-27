@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+.medicine::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+/* 공통태그인 medicine을 추가해주고 공통태그인 medicine에게 after을 작성해놓으면 일일히 늘어날떄마다 clear:both를 사용하기위해 작성안해도 될정도로 줄일수있다 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.Town {
+    background-color: #ECEE81;
+    padding: 20px;
+}
+
+.Town .Nfamily {
+    background-color: #82A0D8;
+    padding: 20px;
+}
+
+.Town .Nfamily .child {
+    background-color: #8DDFCB;
+    float: left;
+}
+
+.Town .Nfamily .child.one {}
+
+.Town .Nfamily .child.two {}
+
+.Town .Nfamily .child.three {}
+
+.Town .Nfamily .child.four {}
+
+.Town .Nfamily .medicine {
+    clear: both;
+    /* Float 처리를 위한 첫번째 방법 */
+}
+
+.Town .Hfamily {
+    background-color: #F1EFEF;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.Town .Hfamily:hover {
+    background-color: cornflowerblue;
+}
+
+.Town .Hfamily::before {
+    content: '';
+}
+
+.Town .Hfamily::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/* before,after는 인라인요소 (글자와 같은요소이다)그러므로 공간의 값을 먹지않아서 width와 height값이 작동하지않는다 
+clear:both는 부모가 공간을 인식하지 못할때 인식시키는 명령어
+단, clear:both는 block 요소일때만 작동됀다
+clear는 마지막 태그일때만 작동하기때문에 after로 막내로 지정하고 inline 요소를 block 요소로 변경해주면 작동하는원리*/
+.Town .Hfamily .child {
+    background-color: #CCC8AA;
+    float: left;
+}
+
+.Town .Hfamily .child .one {}
+
+.Town .Hfamily .child .two {}
+
+.Town .Hfamily .child .three {}
+
+.Town .Hfamily .child .four {}
+
+.bro {
+    background-color: chartreuse;
+    margin-top: 30px;
+    padding: 20px;
+}
+.bro .child {
+    background-color: rgb(37, 37, 182);
+    float: left;
+}
+.bro .one {}
+
+.bro .two {}
+
+.bro .three {}
+
+.bro .four {} 

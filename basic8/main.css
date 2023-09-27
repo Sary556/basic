@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.부모 {
+    position: relative;
+    /* left: 200px;
+    top: 200px; */
+    margin-top: 100px;
+    margin-left: 100px;
+    background-color: seagreen;
+    width: 1000px;
+    background-image: url(https://manual.notch.one/0.9.23/en/docs/nodes/generators/grid/img/node-generators-grid-img.jpg);
+    background-size: cover;
+    margin-bottom: 3000px;
+}
+
+.부모 .자식 {
+    width: 200px;
+    height: 200px;
+}
+
+.부모 .첫째 {
+    background-color: rgb(105, 139, 46);
+    width: 200px;
+    height: 200px;
+    position: relative;
+    /* 원래 자리를 기억함 이특성으로 인해 주변태그엔 영향을주지않음*/
+    left: 400px;
+}
+
+.부모 .둘째 {
+    background-color: rgb(139, 99, 46);
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    /* 부모에게 포지션이없다면 포지션을 더 위인 부모에게 속함
+    부모에게 포지션이있다면 그 부모에게 속함 
+    예제로 태그명 .부모에게 속하지않는다면 body에게 속함
+    .부모에게 포지션이있다면 .부모에게속함 */
+    left: 50px;
+    top: 0;
+}
+
+.부모 .셋째 {
+    background-color: rgb(139, 46, 46);
+    position: static;
+    /* 포지션의기본값 포지션을주지않아도 자동으로 이 태그가속해있는것과 같다*/
+}
+.부모 .넷째 {
+    background-color: rgb(122, 46, 139);
+    position: fixed;
+    /* 어떤부모에도 속하지않으며 지정한 값에 고정됌 */
+    right: 0;
+    bottom: 0;
+}

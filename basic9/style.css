@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.치료::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.전체 {
+    width: 1000px;
+    background-color: #FFC7C7;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.전체 .첫번째 {
+    background-color: #222831;
+    padding: 20px;
+}
+.전체 .첫번째 .자식 {
+    float: left;
+    background-color: cadetblue;
+    height: 200px;
+    width: 24.25%;
+    margin-right: 1%;
+}
+.전체 .첫번째 .자식.자식1 {
+    position: relative;
+}
+.전체 .첫번째 .자식.자식1 .상 {
+    background-color: burlywood;
+    width: 100%; 
+    height: 100%;
+    /* 100%의 기준 = 부모의 높이와넓이를 100%차지 */
+    background-image: url(https://img.megabox.co.kr/SharedImg/2023/09/07/RfsWTz8pqY2MFwWkkY9rDWPt9DPKTgJW_1100.jpg);
+    background-size: cover;
+}
+.전체 .첫번째 .자식.자식1 .하 {
+    background-color: darkolivegreen;
+    width: 100%; 
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url(https://img.megabox.co.kr/SharedImg/2023/09/06/6orOIfhDhIs3fyfZUVdYTuFSfeblWRsb_1100.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s;
+}
+.전체 .첫번째 .자식.자식1 .하:hover {
+    opacity: 0;
+}
+
+.전체 .첫번째 .자식.자식2 {
+    position: relative;
+    background-image: url(
+    https://mblogthumb-phinf.pstatic.net/MjAyMDEyMjdfMjc4/MDAxNjA5MDUyMzkxNzM0.Eyj-lRQqnRdHp_U7BT-3Nh8UB29clf9Iz92C5Xrz77Eg.amCTSo4wW6m9InRwQ7Emj2wiLgftJkxBrgkood_wlggg.GIF.jshn0107/p.gif?type=w800);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+.전체 .첫번째 .자식.자식2 .상 {
+    background-color: firebrick;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    /* 자식의 공간만큼 차지 자식이없기때문에 공간을 재설정해줘야함*/
+    background-image: url(https://image.cine21.com/resize/cine21/still/2011/0706/M0020024_special_10_11[W578-].jpg);
+    background-size: cover;
+    background-position: center;
+    transition: 0.3s;
+}
+.전체 .첫번째 .자식.자식2:hover .상 {
+    left: 0;
+}
+.전체 .첫번째 .자식.자식3 {
+    position: relative;
+    overflow: hidden;
+}
+.전체 .첫번째 .자식.자식3 .yt {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1.4);
+    /* %의 기준이 자신 (.yt)의기준 */
+}
+.전체 .첫번째 .자식.자식4 {
+    margin-right: 0;
+}
+
+.전체 .두번째 {
+    background-color: chocolate;
+}
+.전체 .두번째 .자식 {
+    background-color: #D2E0FB;
+}
+.전체 .두번째 .자식.자식1 {}
+.전체 .두번째 .자식.자식2 {}
+.전체 .두번째 .자식.자식3 {}
+.전체 .두번째 .자식.자식4 {}
