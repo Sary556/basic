@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    color: #333;
+    line-height: 1;
+}
+
+.cont01 {
+    max-width: 1360px;
+    width: 100%;
+    margin: 100px auto;
+
+}
+
+.cont01 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cont01 .list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cont01 .list>div {
+    width: calc(100% / 3 - 15px);
+    height: 450px;
+    margin-bottom: 35px;
+}
+
+.cont01 .list>div:nth-child(2) {
+    order: -1;
+    
+/* .cont01 .list .item:nth-of-type(2) {
+    order: -1;
+    이거두 되긴함..
+} */
+}
+
+.cont01 .list .title {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(7, 91, 150, 1) 0%, rgba(9, 58, 121, 1) 0%, rgba(7, 98, 156, 1) 0%, rgba(114, 7, 156, 1) 25%, rgba(5, 185, 150, 1) 66%, rgba(0, 212, 255, 1) 100%);
+    display: flex;
+/*     flex-wrap: wrap; */
+    justify-content: center;
+    align-content: center;
+    /* 세로 두줄이상 있을시 사용 */
+    text-align: center;
+    flex-direction: column;
+    /* flex wrap이 공간이 충분해서 아래로 가지않으면 강제로 내려줌 */
+}
+/* img에 hover하면 텍스트가 img에 들어가도록 구현 백그라운드 blur와같이 적용되게  */
+
+.cont01 .list .item {
+    position: relative;
+}
+
+.cont01 .list .item div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(240, 248, 255, 0.65);
+    text-align: center;
+    padding-top: 50px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: 0.5s;
+/*     display: none; */
+}
+
+.cont01 .list .item div strong {
+    margin-top: 10px;
+    display: block;
+    /* inline 태그라 inline을 block시켜야함 */
+}
+
+.cont01 .list .item:hover div {
+    opacity: 1;
+    /* display: block; */
+}
+
+@media screen and (max-width: 1024px) {
+    .cont01 .list > div {
+        height: auto;
+    }
+    .cont01 .list > div img {
+        /* height: 300px; */
+        height: 50vw;
+        /* vh - 브라우저 높이에 대응 브라우저 높이 
+        vw - 브라우저 너비에 대응 브라우저 넓이
+        100vw - 브라우저넓이의 100%
+        100vh - 브라우저높이의 100% */
+    }
+
+    .cont01 .list .item div {
+        height: auto;
+        opacity: 1;
+        background-color: transparent;
+        position: static;
+        padding-top: 10px ;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .cont01 .list .title {
+        width: 100%;
+        order: -2;
+        padding: 50px 0;
+    }
+    
+    .cont01 .list > div {
+        /* width: calc(100% / 2 - 8px); */
+        width: 45%;
+    }
+    .cont01 .list > div:nth-child(5) {
+        display: none;
+    }
+    .cont01 .list .item img { 
+        height: 250px;
+    }
+/*     .cont01 .list .item div {
+        height: auto;
+    } */
+}

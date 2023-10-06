@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.깨짐현상방지::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+#전체 {
+    background-color: antiquewhite;
+}
+/* class는 . id는 #으로 불러야함 
+ID는 전체사이트의 유일한 이름이여야한다
+두가지의 이름도 사용할수없다 
+다른곳에 중복사용하면 자바스크립트에서 오류발생*/
+
+#전체 .놀부 {
+    background-color: aqua;
+    width: 1000px;
+    margin: 50px auto 0;
+    padding: 20px;
+
+
+    /* margin : 0 auto는 아래와같다
+    margin-top : 0;
+    margin-bottom : 0;
+    margin-left : auto;
+    margin-right : auto;
+    */
+}
+#전체 .놀부 .자식{
+    width: 23.5%;
+    margin-right: 2%;
+    float: left;
+    background-color: lavender;
+}
+/* #전체 .놀부 .자식1{} */
+#전체 .놀부 .자식1 img{
+    width: 100%;
+}
+#전체 .놀부 .자식2{
+    /* 공간의 넓이 =
+    padding-left + border-left + width + padding-right +
+    bordor-right;
+    
+    공간의 높이 =
+    padding-top + border-top + height + padding-bottom + bordor-bottom;
+    
+    공간의 넓이 = 10px + 5px + 25% + 10px + 5px
+    공간의 높이 = 10px + 5px + 자식의높이 + 10px + 5px
+    */
+    padding: 10px;
+    border: 5px solid red;
+    box-sizing: border-box;
+    background-image: url(https://as1.ftcdn.net/v2/jpg/05/58/62/52/1000_F_558625214_OBAHU0YHwisIxBRZGbIJuIhJtQHGsS4w.jpg);
+    background-size: cover;
+    background-position: center;/
+}
+#전체 .놀부 .자식3{
+    height: 200px;
+    background-image: url(https://cdn-icons-png.flaticon.com/128/3419/3419250.png);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    /* 이미지반복 */
+    background-position: center;
+    /* x축 y축 값이 같을때 단축할수 있음 */
+    background-position: 50% bottom;
+}
+#전체 .놀부 .자식4{
+    position: relative;
+    margin-right: 0;
+    height: 200px;
+    background-image: url(https://scontent-ssn1-1.xx.fbcdn.net/v/t1.6435-9/125248973_183530666733681_3074670965443353163_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=a26aad&_nc_ohc=rmjZfdSjyLsAX8j7mBu&_nc_ht=scontent-ssn1-1.xx&oh=00_AfDWnYN1wBg7FPXOE0xc7a6BdCBWSLkz0XruIpeMwxnl3Q&oe=6546DCC3);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+#전체 .놀부 .자식.자식4 .text {
+    background-color: coral;
+    position: absolute;
+    left: 50%;
+    /* left의 기준 : 부모의 넓이 */
+    top: 100%;
+    /* top의 기준 : 부모의 높이 */
+    padding: 10px 30px;
+    transform: translate(-50%, -50%);
+    /* transform: translate(x축, y축); */
+    border-radius: 10px;
+    /* radius - px : 원을그렸을때 반지름의 높넓이가 10px인만큼 깎인다 */
+    opacity: 0;
+    color: aliceblue;
+    transition: 0.3s;
+    
+}
+#전체 .놀부 .자식.자식4:hover .text {
+    opacity: 1;
+    top: 50%;
+}

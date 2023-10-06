@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2일차 1,2교시</title>
+    <link rel="shortcut icon" href="https://www.apparelnews.co.kr/upfiles/manage/202306/cf67c7d4caf813c9361a2ab2888ef6b9.jpg" type="image/x-icon">
+    <style>
+        * {
+            /* 별(*)모든 태그 */
+            padding: 0;
+            margin: 0;
+        }
+        /* 주석 : 주석문은 초로색으로 표시
+        브라우저가 해석하지 않는 개발자끼리 소통하기위한 메모로 많이 사용 */
+        .흥부 {
+            background-color: green; 
+            padding: 20px;
+            }
+        /* 띄워쓰기: 자손모두포함 */
+        /* padding(내부여백)의 영향은 자식 요소(일자)가 부모 요소(흥부)의 넓이[내부여백](padding)를 따라감
+        높이(height)의 영향은 부모 요소(흥부)가 자식 요소(일자)의 높이(height)를 따라감 */
+
+        .흥부 .일자 {
+            background-color: blueviolet;
+            height: 50px; 
+            width: 200px;
+            margin: auto;
+            /* auto : 중앙배치 */
+        /* 세미클론(;)은 항상 명령문 끝에 작성 마지막 명령문이라면 세미클론이 없어도 오류는안뜨지만 습관화를 위해작성 */
+        }
+        .흥부>.일자 {
+            margin-bottom: 20px;
+        }
+        /* > : 직계 자식만  */
+        .흥부>.이자 {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            /* 
+            overflow : hidden : 
+            포토샵의 클로핑마스크 개념과같은
+            부모(이자)의 영역에서 벗어난 자식(img)이 
+            부모의 영역에서 벗어나지않도록 표기 */
+            margin: auto;
+        }
+        /* 태그를 부를때는 앞의 .을 사용하지 않는다. */
+        /* .흥부>.이자 img {
+            
+        } */
+    </style>
+</head>
+<body>
+    <!-- <시작></끝> -->
+    <div class="흥부">
+        <div class="일자">
+            일자
+        </div><!-- .일자 end -->
+        <div class="이자">
+            <img src="https://m.777lighting.co.kr/web/product/big/202009/6df80d21e23a3675037240e963953b14.jpg" alt="그림">
+            <!-- alt : 본제인 img src가 오류가 나거나 작동하지않으면 alt가 부제의 역할을 함
+            프로그램상 img src가 본제지만 alt도 본제가 될수있음 -->
+        </div><!-- .이자 end -->
+    </div><!-- .흥부 end -->
+</body>
+</html>
